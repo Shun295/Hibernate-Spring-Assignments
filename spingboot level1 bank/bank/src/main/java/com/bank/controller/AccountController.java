@@ -1,8 +1,10 @@
 package com.bank.controller;
 
-import com.bank.exception.ResourceNotFoundException;
+import com.bank.dto.AccountDto;
+import com.bank.dto.AccountResponseDto;
 import com.bank.model.Account;
 import com.bank.service.AccountService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,45 +22,34 @@ public class AccountController {
         return accountService.getAllAccount();
     }
 
-    @PostMapping("/api/account/addAcc")
-    public void addAccount(@RequestBody Account account)
+    @GetMapping("/api/account/allAcc/v2")
+    public AccountResponseDto getAllAccountV2(@RequestParam int page,
+                                              @RequestParam int size)
     {
-        accountService.addAccount(account);
+        return accountService.getAllAccountPagination(page,size);
+    }
+
+
+    @PostMapping("/api/account/addAcc")
+    public void addAccount(@Valid @RequestBody AccountDto accountDto)
+    {
+        accountService.addAccount(accountDto);
     }
 
     @GetMapping("/api/account/getAcc/{id}")
-    public ResponseEntity<Object> getAccountById(@PathVariable int id)
+    public ResponseEntity<Account> getAccountById(@PathVariable int id)
     {
-        try{
-            Account account=accountService.getAccountById(id);
-            return ResponseEntity.ok(account);
-        }
-        catch(ResourceNotFoundException e)
-        {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+            return ResponseEntity.ok(accountService.getAccountById(id));
     }
 
     @DeleteMapping("/api/account/delAcc/{id}")
-    public ResponseEntity<Object> deleteAccById(@PathVariable int id) {
-        try {
+    public void deleteAccById(@PathVariable int id) {
             accountService.deleteAccById(id);
-            return ResponseEntity.ok().build();
-        } catch (ResourceNotFoundException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
     }
 
     @PutMapping("/api/account/updateAcc/{id}")
-    public ResponseEntity<Object> updateAccById(@PathVariable int id, @RequestBody Account updatedAcc)
+    public void updateAccById(@PathVariable int id, @RequestBody Account updatedAcc)
     {
-        try{
             accountService.updateAccById(id,updatedAcc);
-            return ResponseEntity.ok().build();
-        }
-        catch (ResourceNotFoundException e)
-        {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
     }
 }

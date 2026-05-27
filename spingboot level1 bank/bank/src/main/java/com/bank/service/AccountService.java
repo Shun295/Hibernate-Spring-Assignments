@@ -1,9 +1,15 @@
 package com.bank.service;
 
+import com.bank.dto.AccountDto;
+import com.bank.dto.AccountResponseDto;
 import com.bank.exception.ResourceNotFoundException;
+import com.bank.mapper.AccountMapper;
 import com.bank.model.Account;
 import com.bank.reporistory.AccountRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,12 +19,14 @@ import java.util.List;
 public class AccountService {
 
     private final AccountRepository accountRepository;
+    private AccountMapper accountMapper;
 
     public List<Account> getAllAccount() {
         return accountRepository.findAll();
     }
 
-    public void addAccount(Account account) {
+    public void addAccount(AccountDto accountDto) {
+        Account account=accountMapper.mapDtoToEntity(accountDto);
         accountRepository.save(account);
     }
 
@@ -44,4 +52,9 @@ public class AccountService {
     }
 
 
+    public AccountResponseDto getAllAccountPagination(int page, int size) {
+        Pageable pageable=PageRequest.of(page,size);
+        Page<Account> pages=accountRepository.findAll(pageable);
+        return accountMapper.mapEntityToDto(pages);
+    }
 }
