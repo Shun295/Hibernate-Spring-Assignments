@@ -33,22 +33,23 @@ function ArithmeticComponent(){
     }
     return(
         <div>
-            //this section is normally doing operations on two numbers.but in react without braces everythings i considered as just a varible
+            {/*this section is normally doing operations on two numbers.but in react without braces everythings i considered as just a varible*/}
             <h1>Arithmetic Component</h1>
             <p>Sum is: {n1+n2}</p>
             <p>Sub is: {n1-n2}</p>
             <p>Mul is: {n1*n2}</p>
             <p>Div is: {n1/n2}</p>
             
-            <hr />//creates a horizontal row
+            <hr />{/*creates a horizontal row*/}
             <div>
                 <p>Result of (n1=4 & n2=5) is: {result}</p> 
-                //() telling that this func has no parameters.here sum is an argument ..normally onclick{}
-                <p><button onClick={()=>operation('SUM')}>SUM</button></p>//onclick is event handler.operation is an function here calling that
+                {/*() telling that this func has no parameters.here sum is an argument ..normally onclick{}*/}
+                <p><button onClick={()=>operation('SUM')}>SUM</button></p>
+                {/*onclick is event handler.operation is an function here calling that*/}
                 <p><button onClick={()=>operation('SUB')}>SUB</button></p>
                 <p><button onClick={()=>operation('MUL')}>MUL</button></p>
                 <p><button onClick={()=>operation('DIV')}>DIV</button></p>
-                //<p> </p>- is used to form a new row which means go to the next row
+                {/*<p> </p>-is used to form a new row which means go to the next row*/}
             </div>
 
         </div>
