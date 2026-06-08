@@ -1,6 +1,8 @@
 import ArithmeticComponent from "./components/ArithmeticComponent";
 import CreateProduct from "./components/CreateProduct";
+import PostList from "./components/PostList";
 import Products from "./components/Products";
+import UserList from "./components/UserList";
 
 function App(){  // This is a react component
  
@@ -9,7 +11,8 @@ function App(){  // This is a react component
   <div>
       {/*<ArithmeticComponent/>*/}
       {/*<Products/>*/}
-      <CreateProduct/>
+      {/*<CreateProduct/>*/}
+      <UserList/>
   </div>
  )
 
