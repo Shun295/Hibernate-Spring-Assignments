@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const Login=()=>
 {
@@ -9,6 +10,11 @@ const Login=()=>
     const [errMsg,setErrMsg]=useState()
 
     const loginApi = "http://localhost:8080/api/auth/login";
+    const userDetailsApi="http://localhost:8080/api/auth/user-details"
+
+    //navigator
+    const navigate=useNavigate()
+
     const onLogin=async (e)=>
     {
         e.preventDefault();
@@ -20,6 +26,38 @@ const Login=()=>
         try{
             const response=await axios.get(loginApi,config)
             console.log(response.data)
+
+            //saving the token
+            let token=response.data.token
+            //save in localstoarge
+            localStorage.setItem("token",token)
+            localStorage.setItem("username", username)
+
+            //prepare the header
+            const config_details={
+                headers:{
+                    'Authorization' : "Bearer "+token
+                }
+            }
+
+            //Fetch user details
+            const resp=await axios.get(userDetailsApi,config_details)
+            console.log(resp.data)
+
+            let role=resp.data.role
+            switch(role)
+            {
+                case 'OFFICER':
+                    navigate('/officer')//link that we mentioned in app.jsx
+                    break;
+
+                case 'STATIONHEAD':
+                    navigate('/station-head')
+                    break;
+                default:
+                    setErrMsg("Invalid credentails")
+                    break;
+            }
 
         }
         catch(err)
