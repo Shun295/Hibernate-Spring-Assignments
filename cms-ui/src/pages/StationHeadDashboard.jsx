@@ -1,11 +1,13 @@
 import NavbarStationHead from "../components/Navbar-StationHead"
+import OfficerOnboard from "../components/station_head/OfficerOnboard"
 
 const StationHeadDashboard=()=>
 {
     return(
         <div>
             <NavbarStationHead/>
-            <h1> dtationHead</h1>    
+            <OfficerOnboard/>
+              
         </div>
     )
 }
