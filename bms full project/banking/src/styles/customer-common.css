@@ -1,0 +1,531 @@
+/* =========================
+   SECTION CARD
+========================= */
+
+.account-section-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.section-header {
+    margin-bottom: 20px;
+    border-left: 5px solid #0d6efd;
+    padding-left: 15px;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-weight: 700;
+    color: #0b1d51;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.account-table {
+    margin-bottom: 0;
+}
+
+.account-table thead tr {
+    background: #0b1d51;
+}
+
+.account-table thead th {
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.account-table tbody td {
+    padding: 16px;
+    vertical-align: middle;
+}
+
+.account-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.account-table tbody tr:hover {
+    background: #f4f8ff;
+    transform: scale(1.005);
+}
+
+/* =========================
+   ACCOUNT STATUS
+========================= */
+
+.status-active {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.status-closed {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+/* =========================
+   REQUEST STATUS
+========================= */
+
+.badge-approved {
+    background: #198754;
+    color: white;
+}
+
+.badge-reviewed {
+    background: #0dcaf0;
+    color: white;
+}
+
+.badge-pending {
+    background: #ffc107;
+    color: black;
+}
+
+.badge-rejected {
+    background: #dc3545;
+    color: white;
+}
+
+.custom-badge {
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.quick-action-card {
+    border: none;
+    border-radius: 18px;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.08);
+}
+
+.quick-action-card button {
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* =========================
+   DASHBOARD WIDGETS
+========================= */
+
+.dashboard-widget {
+    padding: 25px;
+    border-radius: 18px;
+    color: white;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dashboard-widget h5 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.dashboard-widget h2 {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.widget-blue {
+    background:
+        linear-gradient(
+            135deg,
+            #0b1d51,
+            #1d4ed8
+        );
+}
+
+.widget-green {
+    background:
+        linear-gradient(
+            135deg,
+            #166534,
+            #22c55e
+        );
+}
+
+.widget-gold {
+    background:
+        linear-gradient(
+            135deg,
+            #b45309,
+            #f59e0b
+        );
+}
+
+.summary-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    height: 100%;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.summary-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Section Header */
+.accounts-header {
+    margin-bottom: 20px;
+}
+
+.accounts-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b1d51;
+    margin-bottom: 4px;
+}
+
+.accounts-subtitle {
+    color: #6b7280;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Table Card */
+.table-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Table */
+.accounts-table {
+    margin-bottom: 0;
+}
+
+.accounts-table thead {
+    background: #f8fafc;
+}
+
+.accounts-table thead th {
+    color: #0b1d51;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 2px solid #e5e7eb;
+    padding: 18px;
+}
+
+.accounts-table tbody td {
+    padding: 18px;
+    vertical-align: middle;
+}
+
+.accounts-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* Balance */
+.balance-cell {
+    font-weight: 700;
+    color: #0b1d51;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.closed {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Account Type */
+.type-badge {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+/* Section Header */
+.requests-header {
+    margin-bottom: 20px;
+}
+
+.requests-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b1d51;
+    margin-bottom: 4px;
+}
+
+.requests-subtitle {
+    color: #6b7280;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Table */
+.requests-table {
+    margin-bottom: 0;
+}
+
+.requests-table thead {
+    background: #f8fafc;
+}
+
+.requests-table thead th {
+    color: #0b1d51;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 18px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.requests-table tbody td {
+    padding: 18px;
+    vertical-align: middle;
+}
+
+.requests-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 7px 14px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.status-badge.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.rejected {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-badge.reviewed {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.page-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #0b1d51;
+    margin-bottom: 4px;
+}
+
+.page-subtitle {
+    color: #6b7280;
+    margin: 0;
+}
+
+.account-request-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    background: #fff;
+}
+
+.section-heading {
+    color: #0b1d51;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.account-request-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.form-title {
+    color: #0b1d51;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.form-subtitle {
+    color: #6b7280;
+    margin-bottom: 0;
+}
+
+.section-heading {
+    color: #0b1d51;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.customer-found-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.branch-title {
+    color: #0b1d51;
+    font-weight: 700;
+}
+
+.table-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.summary-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    max-height: 220px;
+}
+
+.transaction-nav-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.transaction-content-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.loan-table thead {
+    background: #f8fafc;
+}
+
+.loan-table thead th {
+    color: #0b1d51;
+    font-weight: 700;
+    padding: 18px;
+}
+
+.loan-table tbody td {
+    padding: 18px;
+    vertical-align: middle;
+}
+
+.loan-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.section-title {
+    color: #0b1d51;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.loan-info-card {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.loan-info-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.loan-info-grid small {
+    color: #6b7280;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.loan-info-grid h6 {
+    color: #0b1d51;
+    font-weight: 700;
+    margin: 0;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.modal-title {
+    color: #0b1d51;
+    font-weight: 700;
+}

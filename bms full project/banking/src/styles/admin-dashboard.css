@@ -1,0 +1,90 @@
+.dashboard-wrapper{
+    background:#f8fafc;
+    min-height:100vh;
+}
+
+.dashboard-title{
+    font-weight:700;
+    color:#1e293b;
+    margin-bottom:25px;
+}
+
+.dashboard-card{
+    border:none !important;
+    border-radius:18px !important;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
+    height:150px;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-4px);
+}
+
+.card-blue{
+    background:#eef4ff;
+    color:#1e40af;
+}
+
+.card-green{
+    background:#ecfdf5;
+    color:#065f46;
+}
+
+.card-yellow{
+    background:#fffbeb;
+    color:#92400e;
+}
+
+.card-red{
+    background:#fef2f2;
+    color:#991b1b;
+}
+
+.card-cyan{
+    background:#f0f9ff;
+    color:#075985;
+}
+
+.card-gray{
+    background:#f8fafc;
+    color:#334155;
+}
+
+.stat-number{
+    font-size:42px;
+    font-weight:700;
+    margin:0;
+}
+
+.quick-actions-card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.quick-btn{
+    height:50px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+.chart-card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.chart-header{
+    background:white;
+    border-bottom:1px solid #e5e7eb;
+    font-weight:600;
+}
+
+.chart-card .card-body{
+    min-height:350px;
+}
+
+.dashboard-card small{
+    opacity:.8;
+}

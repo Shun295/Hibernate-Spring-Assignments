@@ -1,0 +1,186 @@
+/* ==========================
+   PAGE
+========================== */
+
+.dashboard-container {
+    padding: 25px;
+    background: #f4f7fc;
+    min-height: 100vh;
+}
+
+h1 {
+    font-weight: 700;
+    color: #0b1d51;
+}
+
+/* ==========================
+   DASHBOARD CARDS
+========================== */
+
+.customer-card {
+    border: none !important;
+    border-radius: 18px;
+    overflow: hidden;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.customer-card:hover {
+    transform: translateY(-5px);
+}
+
+.customer-card .card-body {
+    padding: 25px;
+}
+
+.customer-card h5 {
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.customer-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.customer-card small {
+    opacity: 0.8;
+}
+
+/* ==========================
+   CARD COLORS
+========================== */
+
+.balance-card {
+    background:
+        linear-gradient(
+            135deg,
+            #0b1d51,
+            #1d4ed8
+        );
+}
+
+.account-card {
+    background:
+        linear-gradient(
+            135deg,
+            #14532d,
+            #22c55e
+        );
+}
+
+.loan-card {
+    background:
+        linear-gradient(
+            135deg,
+            #7c2d12,
+            #f97316
+        );
+}
+
+.request-card {
+    background:
+        linear-gradient(
+            135deg,
+            #7e22ce,
+            #a855f7
+        );
+}
+
+/* ==========================
+   QUICK ACTIONS
+========================== */
+
+.quick-actions {
+    padding: 25px;
+}
+
+.quick-actions h3 {
+    color: #0b1d51;
+    font-weight: 700;
+}
+
+/* ==========================
+   ACTION BUTTONS
+========================== */
+
+.action-btn {
+    height: 70px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 14px !important;
+    border: none !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b1d51,
+            #1d4ed8
+        ) !important;
+
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(
+            29,
+            78,
+            216,
+            0.35
+        );
+}
+
+/* ==========================
+   QUICK ACTION CARD
+========================== */
+
+.card.shadow {
+    border: none !important;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.08) !important;
+}
+
+/* ==========================
+   CHART CARD
+========================== */
+
+.chart-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+}
+
+.chart-card h4 {
+    color: #0b1d51;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+    .customer-card h2 {
+        font-size: 24px;
+    }
+
+    .action-btn {
+        height: 60px;
+    }
+
+}
