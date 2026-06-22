@@ -1,0 +1,30 @@
+package com.bms.dto;
+
+import java.math.BigDecimal;
+
+public record LoanApplicationCustomerDetailsDto(
+
+        int applicationId,
+
+        String loanType,
+
+        BigDecimal principalAmount,
+
+        BigDecimal annualSalary,
+
+        BigDecimal eligibleAmount,
+
+        String remarks,
+
+        BigDecimal interestRate,
+
+        int termInMonth,
+
+        BigDecimal emiAmount,
+
+        BigDecimal totalRepayableAmount,
+
+        String status
+
+) {
+}
